@@ -13,3 +13,4 @@ class Event(models.Model):
     date = models.DateField()
     start_time = models.TimeField()
     duration = models.IntegerField()
+    circuit_name = models.ForeignKey(Location, on_delete=models.CASCADE)
