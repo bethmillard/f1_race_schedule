@@ -16,4 +16,4 @@ class Event(models.Model):
     circuit_name = models.ForeignKey(Location, on_delete=models.CASCADE)
 
     def __str__(self) -> str:
-        return f"{self.event} - {self.start_time}, {self.date}"
+        return f"{self.circuit_name}: {self.event} - {self.start_time}, {self.date}"
