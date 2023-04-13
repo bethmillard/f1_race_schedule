@@ -12,10 +12,15 @@
         <a href=https://www.formula1.com/en/racing/2023.html> here</a>
     </p>
 
-    <p>
-
-    For the 2023 season there will be {{num_meetings}} races this season
-
-    </p>
+    <h2>Events</h2>
+    <ul>
+        {% for event in events %}
+            <li>
+                <a href="/events/{{event.id}}">
+                    {{event.event}}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
 </body>
 </html>
