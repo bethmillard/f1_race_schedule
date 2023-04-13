@@ -1,5 +1,7 @@
 from django.shortcuts import render
-from django.http import HttpResponse
+
+from events.models import Event
 
 def welcome(request):
-    return HttpResponse("welcome to the f1 race schedule website")
+    return render(request, "website/welcome.html",
+                  {"num_meetings":Event.objects.count()})
