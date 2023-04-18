@@ -8,6 +8,9 @@ class Location(models.Model):
     def __str__(self):
         return f"{self.circuit_name} - {self.city}, {self.country}"
 
+class GrandPrix(models.Model):
+    grand_prix_name = models.CharField(max_length=200)
+
 class Event(models.Model):
     event = models.CharField(max_length=200)
     date = models.DateField()
