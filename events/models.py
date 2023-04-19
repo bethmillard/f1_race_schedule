@@ -11,6 +11,9 @@ class Location(models.Model):
 class GrandPrix(models.Model):
     grand_prix_name = models.CharField(max_length=200)
 
+    def __str__(self):
+        return f"{self.grand_prix_name}"
+
 class Event(models.Model):
     event = models.CharField(max_length=200)
     date = models.DateField()
