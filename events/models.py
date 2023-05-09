@@ -19,7 +19,8 @@ class Event(models.Model):
     date = models.DateField()
     start_time = models.TimeField()
     duration = models.IntegerField()
-    circuit_name = models.ForeignKey(Location, on_delete=models.CASCADE)
+    circuit_name = models.ForeignKey(Location, on_delete=models.CASCADE, default=48)
+    grand_prix_name = models.ForeignKey(GrandPrix, on_delete=models.CASCADE, default=24)
 
     def __str__(self) -> str:
         return f"{self.circuit_name}: {self.event} - {self.start_time}, {self.date}"
